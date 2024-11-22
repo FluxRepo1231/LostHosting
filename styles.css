@@ -1,0 +1,386 @@
+/* General Settings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: #fff;
+  overflow-x: hidden;
+  line-height: 1.6;
+  zoom: 0.8; /* Zoom out the entire page by 80% */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeIn 2s ease-out;
+}
+
+.hero-section .banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 350px;
+  width: 100%;
+}
+
+.hero-section .banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  filter: brightness(50%);
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+  animation: slideUp 1.5s ease-out;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  animation: slideUp 1.8s ease-out;
+}
+
+.hero-section .buttons a {
+  padding: 18px 36px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border-radius: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.hero-section .buttons a:hover {
+  background-color: #218838;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-section .buttons a:active {
+  transform: translateY(1px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo-image {
+  width: 350px; /* Adjust the size as needed */
+  height: auto;
+}
+
+/* Features Section */
+.features {
+  background-color: #1f1f1f;
+  padding: 80px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  animation: fadeIn 2s ease-out;
+}
+
+.features h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.feature-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-cards .card {
+  background-color: #2a2a2a;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  width: 30%;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background-color: #333;
+}
+
+.feature-cards .card i {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  color: #28a745;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.feature-cards .card:hover i {
+  transform: rotate(360deg);
+  color: #fff;
+}
+
+.feature-cards .card h3 {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.feature-cards .card p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* Pricing Section */
+.pricing {
+  background-color: #1f1f1f;
+  padding: 80px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  animation: fadeIn 2s ease-out;
+}
+
+.pricing h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.pricing-card {
+  background-color: #2a2a2a;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pricing-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+  background-color: #333;
+}
+
+.pricing-card i {
+  font-size: 3rem;
+  color: #28a745;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.pricing-card p {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.pricing-btn {
+  padding: 15px 30px;
+  background-color: #28a745;
+  color: #fff;
+  font-size: 1.25rem;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.pricing-btn:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Animations */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes iconBounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Apply to Hero Section */
+.hero-section h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.6);
+  animation: slideInLeft 1.5s ease-out;
+}
+
+.hero-section p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  animation: slideUp 1.8s ease-out;
+}
+
+/* Apply to Features Section */
+.features {
+  background-color: #1f1f1f;
+  padding: 80px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  animation: fadeIn 2s ease-out;
+}
+
+.feature-cards .card {
+  background-color: #2a2a2a;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+  width: 30%;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  animation: scaleUp 1s ease-out;
+}
+
+.feature-cards .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  background-color: #333;
+}
+
+/* Apply to Logo */
+.logo-image {
+  width: 350px; /* Adjust the size as needed */
+  height: auto;
+  animation: iconBounce 5s infinite ease-in-out;
+}
+
+/* Apply to Pricing Section */
+.pricing {
+  background-color: #1f1f1f;
+  padding: 80px 20px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  animation: fadeIn 2s ease-out;
+}
+
+/* Apply to Footer Section */
+footer {
+  background-color: #121212;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeIn 2s ease-out 1s; /* Add a delay to the footer */
+}
+
+footer p {
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+footer .footer-links {
+  margin-top: 30px;
+}
+
+footer .footer-links a {
+  color: #fff;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s ease-in-out;
+}
+
+footer .footer-links a:hover {
+  color: #28a745;
+  text-decoration: underline;
+}
